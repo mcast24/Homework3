@@ -23,13 +23,14 @@
 <h3>Office Locations</h3>
   <div class="field">
     <% form.fields_for :offices do |office| %>
-      <%= render 'office_field', :f => office %>
-    <% end %>
+      <%= render 'office_fields', :f => office %>
+      <% end %>
     <div class="links">
+      <%= link_to_add_association 'Add Office Location', form, :offices %>
+    </div>
+  </div>
+
+  <div class="actions">
       <%= form.submit %>
     </div>
     <% end %>
-  </div>
-  <div class="actions">
-    <%= form.submit %>
-  </div>

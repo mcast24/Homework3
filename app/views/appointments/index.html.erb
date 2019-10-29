@@ -16,8 +16,8 @@
     <% @appointments.each do |appointment| %>
       <tr>
         <td><%= appointment.visit.to_formatted_s(:long_ordinal) %></td>
-        <td><%= appointment.physician_id %></td>
-        <td><%= appointment.patient_id %></td>
+        <td><%= appointment.physician.name %></td>
+        <td><%= appointment.patient.name %></td>
         <td><%= link_to 'Show', appointment %></td>
         <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
         <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

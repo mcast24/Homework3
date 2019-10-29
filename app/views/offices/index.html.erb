@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Street address</th>
-      <th>Zip code</th>
+      <th>Zip Code</th>
       <th>Phone</th>
       <th>Physician</th>
       <th colspan="3"></th>
@@ -19,7 +19,7 @@
         <td><%= office.street_address %></td>
         <td><%= office.zip_code %></td>
         <td><%= office.phone %></td>
-        <td><%= office.physician_id %></td>
+        <td><%= office.physician.name %></td>
         <td><%= link_to 'Show', office %></td>
         <td><%= link_to 'Edit', edit_office_path(office) %></td>
         <td><%= link_to 'Destroy', office, method: :delete, data: { confirm: 'Are you sure?' } %></td>
